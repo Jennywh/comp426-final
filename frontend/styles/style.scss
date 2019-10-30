@@ -171,7 +171,7 @@ input[type=submit]:active {
 
 
 .index {
-    background: url(/img/index.jpeg) no-repeat;
+    background: url(../img/index.jpeg) no-repeat;
     background-position: center;
 
     background-size: cover;
@@ -188,7 +188,7 @@ input[type=submit]:active {
 
 
 .signUpForm {
-    background: url(/img/user.jpeg) no-repeat;
+    background: url(../img/user.jpeg) no-repeat;
     min-height: 800px;
     background-size: cover;
 
@@ -226,10 +226,10 @@ input[type=submit]:active {
     min-height: 800px;
     min-width: 500px;
     width: 100%;
-    background: url(/img/index.jpeg) no-repeat;
+    background: url(../img/index.jpeg) no-repeat;
     background-size: cover;
     background-blend-mode: overlay;
-    // background: burlywood;
+
 
     .top-bar {
 
@@ -314,7 +314,7 @@ input[type=submit]:active {
 
 
 .user-page {
-    background: url(/img/user.jpeg) no-repeat;
+    background: url(../img/user.jpeg) no-repeat;
     background-size: cover;
     min-height: 800px;
     min-width: 500px;
