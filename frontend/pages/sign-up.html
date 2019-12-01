@@ -10,9 +10,8 @@
 
   <body class="signUpForm">
     <form class="wrapper" action="">
-        <input class="username" type="text" placeholder="Username"/>
-        <input class="password" type="password" placeholder="Password"/>
-
+        <input class="username" id="uname" type="text" placeholder="Username"/>
+        <input class="password" id="pword" type="password" placeholder="Password"/>
 
         <select class="classYear">
             <option value="firstYear">First Year</option>
@@ -28,16 +27,12 @@
             <option value="cobb">Cobb</option>
         </select>
         
-        <input type="submit" value = "Submit"></input>
-
+        <input id="submit" type="submit" value = "Submit"></input>
     </form>
-
-
-
     <script src="../node_modules/axios/dist/axios.min.js"></script>
-    <script>
-    
-    </script>
-    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="sign-up.js" type="module"></script>
+
   </body>
+
 </html>

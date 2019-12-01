@@ -1,1 +1,19 @@
-{}
+{
+  "users": {
+    "chris": {
+      "passwordHash": "$2b$10$4pFHnXu7Xy3RAjrpeA0PIe7gu68JgfOXfFYQUr.Mh9f3xFr2qf.PW",
+      "data": {
+        "role": 2,
+        "description": "Lazy..."
+      }
+    },
+    "username": {
+      "passwordHash": "$2b$10$YxJLduRC7WXhq8iIKDwI6.epxNrylEhcQyz56bJzCyHnKATjWKpdm",
+      "data": {}
+    },
+    "uname": {
+      "passwordHash": "$2b$10$u3mbCqGkKX1GvjOcN/uJsuY7U2AXF212mZbddU7Y8cczvJcm.NL4W",
+      "data": {}
+    }
+  }
+}
