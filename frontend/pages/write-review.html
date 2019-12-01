@@ -19,7 +19,7 @@
     </div>
 
     <div class="center review-form">
-      <input
+      <input id="dorm"
         class="form-control"
         type="text"
         placeholder="Find dorms"
@@ -27,9 +27,13 @@
       />
       <div class="stars">⭐⭐⭐⭐</div>
       <textarea class="form-control" id="paragraph" rows="3"></textarea>
-      <button class="submit horizontal-center">
+      <button id="submit" class="submit horizontal-center">
         Submit
       </button>
     </div>
+
+   <script src="../node_modules/axios/dist/axios.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+   <script src="write-review.js" type="module"></script>
   </body>
 </html>

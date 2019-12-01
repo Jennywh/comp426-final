@@ -9,6 +9,7 @@ $(function() {
         (async () => {
             let r = await axios.post("http://localhost:3000/account/login",
                 {"name": username, "pass": password, "data": { }}).then(it => it.data);
-        })()
+        })();
+        alert("logged in");
     })
 });

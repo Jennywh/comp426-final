@@ -22,6 +22,27 @@
         "year": "senior",
         "dorm": "craig"
       }
+    },
+    "test": {
+      "passwordHash": "$2b$10$aAc84pzvD.URf1jfxNi5Au6huEod1Y/ZrZXDhJ4ZkYCMj8uzWbwJy",
+      "data": {
+        "year": "junior",
+        "dorm": "craigNorth"
+      }
+    },
+    "sdoefni": {
+      "passwordHash": "$2b$10$/oHjGPhJYgJfvtiSE.WJsuRc0.cT/4FAd4kGVsk..9cIOPadFtJwi",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "vrwe": {
+      "passwordHash": "$2b$10$Wf.epSXWkLJtYzbAsxY08ecP3wOzjfnAAZAjdwHeGe5RkEb6R.p4m",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
     }
   }
 }
