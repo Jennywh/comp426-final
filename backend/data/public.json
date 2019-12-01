@@ -1,2 +1,31 @@
 {
+  "authors": {
+    "author_1": {
+      "author": "author_1",
+      "score": 5,
+      "dorm": "Hinton James",
+      "review": ""
+    }
+  },
+
+  "dorms": {
+    "hojo": {
+      "name": "Hinton James",
+      "pic": "https://picsum.photos/140",
+      "community": "Hinton James Community",
+      "review": {}
+    },
+    "alderman": {
+      "name": "Alderman",
+      "pic": "https://picsum.photos/140",
+      "community": "Kenan Community",
+      "review": {}
+    },
+    "rv1": {
+      "name": "Ram Village 1",
+      "pic": "https://picsum.photos/140",
+      "community": "Ram Village Community",
+      "review": {}
+    }
+  }
 }
