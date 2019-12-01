@@ -1,19 +1,27 @@
 {
   "users": {
-    "chris": {
-      "passwordHash": "$2b$10$4pFHnXu7Xy3RAjrpeA0PIe7gu68JgfOXfFYQUr.Mh9f3xFr2qf.PW",
+    "1": {
+      "passwordHash": "$2b$10$SK/2N7/WiMsIm7mhS8Nr5eoSNWUTlGjDG0wLLapCTIrQ9clio.peK",
+      "data": {}
+    },
+    "13": {
+      "passwordHash": "$2b$10$hnBjEcTVtRrVsvVGbyKYBuMR5OSTzLpUWIw8laKanLI3JPuAZ7acq",
+      "data": {}
+    },
+    "55": {
+      "passwordHash": "$2b$10$3hb.Dz.k4YYwf7QkigG2g.oCIfOR6FeSo3QaXdAGabNYk/FWx6lKG",
+      "data": {}
+    },
+    "133": {
+      "passwordHash": "$2b$10$HDWHFpvEOpHwlXKsrG5Czend.0VgBmJ.9t8jKc5fiKu0aR6x3WFCm",
+      "data": {}
+    },
+    "mingming": {
+      "passwordHash": "$2b$10$NbaaGVCMGZXNwyu8RpZzxe8N55vlzU7zQOxv/HqMDJkltCCwYONTS",
       "data": {
-        "role": 2,
-        "description": "Lazy..."
+        "year": "senior",
+        "dorm": "craig"
       }
-    },
-    "username": {
-      "passwordHash": "$2b$10$YxJLduRC7WXhq8iIKDwI6.epxNrylEhcQyz56bJzCyHnKATjWKpdm",
-      "data": {}
-    },
-    "uname": {
-      "passwordHash": "$2b$10$u3mbCqGkKX1GvjOcN/uJsuY7U2AXF212mZbddU7Y8cczvJcm.NL4W",
-      "data": {}
     }
   }
 }
