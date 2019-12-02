@@ -18,11 +18,5 @@
       "community": "Ram Village Community",
       "review": {}
     }
-  },
-  "reviews": {
-    "author": "test_user",
-    "dorm": "Hinton James",
-    "score": 5,
-    "review": "very bad"
   }
 }
