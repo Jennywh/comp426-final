@@ -38,6 +38,12 @@
         "dorm": "Hinton James",
         "score": 5,
         "review": "test 3"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Hardin",
+        "score": 5,
+        "review": "Good"
       }
     ]
   }
