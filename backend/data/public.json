@@ -1,12 +1,4 @@
 {
-  "authors": {
-    "author_1": {
-      "author": "author_1",
-      "score": 5,
-      "dorm": "Hinton James",
-      "review": ""
-    }
-  },
   "dorms": {
     "hojo": {
       "name": "Hinton James",
@@ -28,9 +20,25 @@
     }
   },
   "reviews": {
-    "author": "test_user",
-    "dorm": "klxcu",
-    "score": 5,
-    "review": "jopihyuftdyryfyg"
+    "test_user": [
+      {
+        "author": "test_user",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "test 1"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "test 2"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "test 3"
+      }
+    ]
   }
 }
