@@ -1,13 +1,4 @@
 {
-  "authors": {
-    "author_1": {
-      "author": "author_1",
-      "score": 5,
-      "dorm": "Hinton James",
-      "review": ""
-    }
-  },
-
   "dorms": {
     "hojo": {
       "name": "Hinton James",
@@ -27,5 +18,11 @@
       "community": "Ram Village Community",
       "review": {}
     }
+  },
+  "reviews": {
+    "author": "test_user",
+    "dorm": "Hinton James",
+    "score": 5,
+    "review": "very bad"
   }
 }

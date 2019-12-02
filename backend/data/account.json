@@ -1,1 +1,11 @@
-{}
+{
+  "users": {
+    "test_user": {
+      "passwordHash": "$2b$10$1gGs1y.N.O/BuhCjgjCopOmw8nlycrgqXMEcw5NYCDXqlruSBKNPW",
+      "data": {
+        "year": "senior",
+        "dorm": "cobb"
+      }
+    }
+  }
+}

@@ -4,17 +4,14 @@ $(function() {
         ev.preventDefault();
         ev.stopPropagation();
         ev.stopImmediatePropagation();
-        let review = document.getElementById("paragraph").innerHTML;
-        let dorm = document.getElementById("myInput").value;
-        // let user = await axios({
-        //     method: 'get',
-        //     url: 'https://comp426fa19.cs.unc.edu/sessions',
-        //     withCredentials: true,
-        // }).then(it => it.data);
-        // how to get current user name
         (async () => {
+            let review = document.getElementById("paragraph").value;
+            let dorm = document.getElementById("myInput").value;
+            let token = localStorage['jwt'];
+            let user_info = await axios.get("http://localhost:3000/account/status",
+            {headers: {Authorization: "Bearer " + token}});
             let r = await axios.post("http://localhost:3000/public/reviews",
-                {"data": {"author": 'author_1', "dorm": dorm, "score": 5, "review": review}}).then(it => it.data);
+            {"data": {"author": user_info.data.user.name, "dorm": dorm, "score": 5, "review": review}}).then(it => it.data);
         })();
     })
-});
+})
