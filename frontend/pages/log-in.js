@@ -9,6 +9,8 @@ $(function() {
         (async () => {
             let r = await axios.post("http://localhost:3000/account/login",
                 {"name": username, "pass": password, "data": { }}).then(it => it.data);
+            const jwt = r.jwt;
+            localStorage.setItem('jwt', jwt);
         })();
         // alert("logged in");
     })

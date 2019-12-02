@@ -7,7 +7,6 @@
       "review": ""
     }
   },
-
   "dorms": {
     "hojo": {
       "name": "Hinton James",
@@ -27,5 +26,11 @@
       "community": "Ram Village Community",
       "review": {}
     }
+  },
+  "reviews": {
+    "author": "test_user",
+    "dorm": "klxcu",
+    "score": 5,
+    "review": "jopihyuftdyryfyg"
   }
 }
