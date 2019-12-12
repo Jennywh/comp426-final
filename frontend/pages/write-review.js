@@ -12,6 +12,11 @@ $(function() {
             {headers: {Authorization: "Bearer " + token}});
             let r = await axios.post("http://localhost:3000/public/reviews/"+user_info.data.user.name,
             {"type": "merge", "data": {"author": user_info.data.user.name, "dorm": dorm, "score": 5, "review": review}}).then(it => it.data);
+<<<<<<< Updated upstream
+=======
+            let r2 = await axios.post("http://localhost:3000/user/"+user_info.data.user.name,
+            {"type": "merge", "data": {"author": user_info.data.user.name, "dorm": dorm, "score": 5, "review": review}}).then(it => it.data);
+>>>>>>> Stashed changes
         })();
     })
 })

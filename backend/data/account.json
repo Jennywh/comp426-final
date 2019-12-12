@@ -1,5 +1,6 @@
 {
   "users": {
+<<<<<<< Updated upstream
     "test_user": {
       "passwordHash": "$2b$10$1gGs1y.N.O/BuhCjgjCopOmw8nlycrgqXMEcw5NYCDXqlruSBKNPW",
       "data": {
@@ -19,6 +20,13 @@
       "data": {
         "year": "senior",
         "dorm": "craig"
+=======
+    "mingming": {
+      "passwordHash": "$2b$10$IpcNYrG2ATJjibBO/uY4Dua37GSHm/b8bED4xletDhfj6NP/d22de",
+      "data": {
+        "year": "sophomore",
+        "dorm": "cobb"
+>>>>>>> Stashed changes
       }
     }
   }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="UNC Dorm" />
+  <meta name="author" content="Jenny Wang" />
+  <title>UNC-dorm</title>
+</head>
+
+<body class="signUpForm" id="form">
+  <div class="top-bar">
+    <button class="back" onclick="location.href='./_reviews.html'">Home</button>
+    <div class="right">
+      <button class="login" onclick="location.href='./log-in.html'">
+        Log In
+      </button>
+    </div>
+    <form class="wrapper" action="">
+      <input class="username" id="uname" type="text" placeholder="Username" />
+      <input class="password" id="pword" type="password" placeholder="Password" />
+
+      <select class="classYear" id="year">
+        <option value="firstYear">First Year</option>
+        <option value="sophomore">Sophomore</option>
+        <option value="junior">Junior</option>
+        <option value="senior">Senior</option>
+      </select>
+
+      <select class="current-dorm" id="dorm">
+        <option value="hojo">Hinton James</option>
+        <option value="craig">Craig</option>
+        <option value="craigNorth">Craig North</option>
+        <option value="cobb">Cobb</option>
+      </select>
+
+      <input id="submit" type="submit" value="Submit"></input>
+    </form>
+    <div id='footer' class='footer'>
+      Welcome, User
+    </div>
+    <!-- <script src="sign-up.js" type="module"></script> -->
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+    <script>
+      $(function () {
+        let button = $("#submit");
+        button.click((ev) => {
+          ev.preventDefault();
+          ev.stopPropagation();
+          ev.stopImmediatePropagation();
+          let username = $("#uname").val();
+          let password = $("#pword").val();
+          let year = $("#year").val();
+          let dorm = $("#dorm").val();
+          (async () => {
+            let r = await axios.post("http://localhost:3000/account/create", { "name": username, "pass": password, "data": { "year": year, "dorm": dorm } })
+              .then(it => {
+                $('#footer').removeClass('footer')
+                $('#footer').addClass('showFooter')
+                $('#footer').html('welcome, ' + username)
+                setTimeout(function () { window.location.href = "./log-in.html"; }, 1500);
+              }
+              )
+              .catch(errorMessage => {
+                console.log(errorMessage.response.data.msg);
+                $('#footer').removeClass('footer')
+                $('#footer').addClass('showFooter')
+                $('#footer').html('Sorry! ' + username + ' is already in use')
+                setTimeout(function () {
+                  $('#footer').removeClass('showFooter')
+                  $('#footer').addClass('footer')
+                }, 3000);
+
+
+              });
+          })();
+        })
+      });
+
+    </script>
+</body>
+
+
+</html>

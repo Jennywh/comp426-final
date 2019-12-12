@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../styles/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="UNC Dorm" />
+  <meta name="author" content="Jenny Wang" />
+  <title>UNC-dorm</title>
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+</head>
+
+<body class="signUpForm">
+
+  <div class="top-bar">
+    <button class="back" onclick="location.href='./_reviews.html'">Home</button>
+  </div>
+
+
+  <form class="wrapper" action="">
+    <div id='popup' class='popup-hide'>The username or password you've entered doesn't match any account.</div>
+
+    <input class="username" id="uname" type="text" placeholder="Username" />
+    <input class="password" id="pword" type="password" placeholder="Password" />
+    <input id="submit" type="submit" value="Log In"></input>
+  </form>
+
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function () {
+      let button = $("#submit");
+      button.click((ev) => {
+        ev.preventDefault();
+        ev.stopPropagation();
+        ev.stopImmediatePropagation();
+        let username = document.getElementById("uname").value;
+        let password = document.getElementById("pword").value;
+        (async () => {
+          let r = await axios.post("http://localhost:3000/account/login",
+            { "name": username, "pass": password, "data": {} })
+            .then(it => {
+              console.log('success');
+              console.log(it.data);
+
+              $('#popup').removeClass('popup-show')
+              $('#popup').addClass('popup-hide')
+
+              // const jwt = r.jwt;
+              localStorage.setItem('username', username);
+              localStorage.setItem('jwt', it.data.jwt);
+              window.location.href = "./_reviews.html";
+              // console.log(jwt);
+            })
+            .catch(errorMessage => {
+              console.log('catched');
+              // console.log(errorMessage.response.data.msg);
+              $('#popup').removeClass('popup-hide')
+              $('#popup').addClass('popup-show')
+
+            });
+
+        })();
+
+      })
+    });
+  </script>
+
+
+
+</body>
+
+</html>

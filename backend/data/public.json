@@ -1,4 +1,5 @@
 {
+<<<<<<< Updated upstream
   "dorms": {
     "hojo": {
       "name": "Hinton James",
@@ -78,6 +79,24 @@
         "dorm": "Horton",
         "score": 5,
         "review": "vfsiahjcocbhfsjoclkb"
+=======
+  "reviews": {
+    "mingming": [
+      {
+        "dorm": "Kenan",
+        "score": 5,
+        "review": "cavdesv"
+      },
+      {
+        "dorm": "Parker",
+        "score": 3,
+        "review": "acdbghjyuthrg"
+      },
+      {
+        "dorm": "Hardin",
+        "score": 5,
+        "review": "bsertnrbt"
+>>>>>>> Stashed changes
       }
     ]
   }
