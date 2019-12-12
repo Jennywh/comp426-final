@@ -44,6 +44,40 @@
         "dorm": "Hardin",
         "score": 5,
         "review": "Good"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Ram Village",
+        "score": 5,
+        "review": "Awesome"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "NOOOO"
+      },
+      {
+        "author": "test_user",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "review1"
+      }
+    ],
+    "mingming": [
+      {
+        "author": "mingming",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "review2"
+      }
+    ],
+    "jenny": [
+      {
+        "author": "jenny",
+        "dorm": "Horton",
+        "score": 5,
+        "review": "vfsiahjcocbhfsjoclkb"
       }
     ]
   }

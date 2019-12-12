@@ -6,6 +6,20 @@
         "year": "senior",
         "dorm": "cobb"
       }
+    },
+    "mingming": {
+      "passwordHash": "$2b$10$pXmbHzVXicP/P5palc3sWeyxIZqZ3gwkgwV5nhIVjGwDnkXgORre.",
+      "data": {
+        "year": "senior",
+        "dorm": "hojo"
+      }
+    },
+    "jenny": {
+      "passwordHash": "$2b$10$6Ico94UkRsVMWn/4LGTlDOEWfODrWR3MlKW.5Lkg4U5PW12Ovxay.",
+      "data": {
+        "year": "senior",
+        "dorm": "craig"
+      }
     }
   }
 }
