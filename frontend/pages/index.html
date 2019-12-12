@@ -2,38 +2,147 @@
 <html>
 
 <head>
-  <link rel="stylesheet" href="../styles/style.css" />
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
-  <meta charset="UTF-8" />
-  <meta name="keywords" content="UNC Dorm" />
-  <meta name="author" content="Jenny Wang" />
-  <title>UNC-dorm</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UNC-Dorm</title>
+    <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.8.x-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
 </head>
 
-<body class="index">
-  <div class="top-bar">
-    <div class="right">
-      <button class="login" onclick="location.href='./log-in.html'">
-        Log In
-      </button>
-      <button class="signup" onclick="location.href='./sign-up.html'">
-        Sign Up
-      </button>
-    </div>
-  </div>
+<body>
+    <section class="hero is-info is-fullheight">
+        <div class="hero-head">
+            <nav class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <span class="navbar-burger burger" data-target="navbarMenu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
 
-  <div class="search-bar">
-    <input class="search-input" type="text" placeholder="Find dorms" />
-    <button class="all-dorms">All dorms</button>
-  </div>
+
+
+
+                        <div class="navbar-end">
+                            <div class="navbar-item">
+                                <div class="buttons">
+                                    <a class="button is-primary signup" href="./sign-up.html">
+                                        <strong>Sign up</strong>
+                                    </a>
+                                    <a class="button is-light login" href="./sign-up.html">
+                                        Log in
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-6 is-offset-3">
+                    <h1 class="title">
+                        UNC Dorm Reivew
+                    </h1>
+                    <h2 class="subtitle">
+                        Click here to view all on-campus dorms on map
+                    </h2>
+                    <div class="box">
+                        <div class="field is-grouped">
+                            <p class="control is-expanded">
+                                <input class="input" type="text" placeholder="Find dorms">
+                            </p>
+                            <p class="control">
+                                <a class="button is-info" href="./_reviews.html">
+                                    All dorms
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <h2 class="title is-5" style='position: absolute;width:inherit' id='welcome'></h2>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+
+            if (localStorage.getItem('username') != null) {
+                let link = "./user-page.html"
+                let username = localStorage.getItem('username')
+                $('.login').replaceWith(`
+                <a class="button is-light login href=${link}">
+              Hi, ${username}
+            </a>`)
+                $('.signup').hide()
+            }
+
+            var dataText = ["Welcome!!",
+                "Which Dorm do you live in??",
+                "Wanna leave a review to help others? :)",
+                "Sign up for an account to leave a review!",
+                "All rievews are anynomous for sure.",
+                "Here's UNC Dorm review!",
+            ];
+
+            // type one text in the typwriter
+            // keeps calling itself until the text is finished
+            function typeWriter(text, i, fnCallback) {
+                // check if text isn't finished yet
+                if (i < (text.length)) {
+                    // add next character to h1
+                    // $('#welcome').html(`${$('#welcome').html()}${text2.charAt(j)}`);
+                    $('#welcome').html(text.substring(0, i + 1) + '<span aria-hidden="true"></span>');
+
+                    // $('#welcome').innerHTML = text.substring(0, i + 1) + '<span aria-hidden="true"></span>';
+
+                    // wait for a while and call this function again for next character
+                    setTimeout(function () {
+                        typeWriter(text, i + 1, fnCallback)
+                    }, 50);
+                }
+                // text finished, call callback if there is a callback function
+                else if (typeof fnCallback == 'function') {
+                    // call callback after timeout
+                    setTimeout(fnCallback, 700);
+                }
+            }
+            // start a typewriter animation for a text in the dataText array
+            function StartTextAnimation(i) {
+                if (typeof dataText[i] == 'undefined') {
+                    setTimeout(function () {
+                        StartTextAnimation(0);
+                    }, 20000);
+                }
+                // check if dataText[i] exists
+                if (dataText[i] != undefined) {
+                    // text exists! start typewriter animation
+                    typeWriter(dataText[i], 0, function () {
+                        // after callback (and whole text has been animated), start next text
+                        StartTextAnimation(i + 1);
+                    });
+                }
+            }
+            // start the text animation
+            StartTextAnimation(0);
+        });
+
+    </script>
+
 </body>
-
-<script src="../node_modules/axios/dist/axios.min.js"></script>
-
-
-<script>
-
-</script>
 
 </html>

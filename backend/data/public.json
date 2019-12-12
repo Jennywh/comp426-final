@@ -20,6 +20,25 @@
     }
   },
   "reviews": {
+    "1234": [
+      {
+        "author": "1234",
+        "dorm": "Hinton James",
+        "score": 5,
+        "review": "fnj"
+      },
+      {
+        "author": "1234",
+        "dorm": "Horton",
+        "score": 2,
+        "review": "score ====2"
+      },
+      {
+        "dorm": "Hinton James",
+        "score": 3,
+        "review": "3"
+      }
+    ],
     "test_user": [
       {
         "author": "test_user",

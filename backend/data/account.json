@@ -1,10 +1,80 @@
 {
   "users": {
+    "123": {
+      "passwordHash": "$2b$10$o389nACd8i6bRhR0OyH.WeVNeO4RIocAfHM6MLn4Ng2d4xG59HF9e",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "1234": {
+      "passwordHash": "$2b$10$K5gj8HFndvg170GAGlCJjO0jr3QTk6rS8gsdGw.FQbdPt3Huwn236",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
     "test_user": {
       "passwordHash": "$2b$10$1gGs1y.N.O/BuhCjgjCopOmw8nlycrgqXMEcw5NYCDXqlruSBKNPW",
       "data": {
         "year": "senior",
         "dorm": "cobb"
+      }
+    },
+    "jenn": {
+      "passwordHash": "$2b$10$bVrQIdOznJLoGbwZenKxyOLYc6sn.t0Xkg32jCcHazotzHYn7ao7a",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "ddd": {
+      "passwordHash": "$2b$10$Un2bYX7s9xWO6w8lBUdxguJ5mKyR7AUY./fpXcX78VfjkdBfEQoKK",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "ff": {
+      "passwordHash": "$2b$10$9rHrgEjK4Gqd0Yg/hPClqez94.E2VsGNYUDd7fMZV.Ty2JjkPaHEy",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "another": {
+      "passwordHash": "$2b$10$mEw9VyDUuWwikhwv680VX.yfTbskHupooXaL2QikXB3tvydZPIttq",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "jennyy": {
+      "passwordHash": "$2b$10$znrOK0yOSL5zYdDAzgRmp.cJcIE1IQxnFUjJJhoExJBCQv55GnQWO",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "jennyyy": {
+      "passwordHash": "$2b$10$34oyzOmzfr1AJNM4AFER3.7GHWAiqkinK25FCoArCRtwHU.3WZe.a",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "jennyyy!": {
+      "passwordHash": "$2b$10$.1IEsHjZJ/gi6cxFUsX58.ycJWbbf7AxsniXuCSvIFX/WtR351SFi",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "joewl": {
+      "passwordHash": "$2b$10$1xWtnw.SF.zn40gc1hvVO.CqXQNg/9trHycwaYVO7BmrmGnd0ppLS",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
       }
     }
   }

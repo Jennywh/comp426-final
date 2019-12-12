@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../styles/style.css" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="UNC Dorm" />
+  <meta name="author" content="Jenny Wang" />
+  <title>UNC-dorm</title>
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+
+</head>
+
+<body class="index">
+  <section class='hero is-info is-fullheight'>
+    <div class="top-bar">
+      <div class="right">
+        <button class="login" onclick="location.href='./log-in.html'">
+          Log In
+        </button>
+        <button class="signup" onclick="location.href='./sign-up.html'">
+          Sign Up
+        </button>
+      </div>
+    </div>
+
+    <div class="search-bar">
+      <input class="search-input" type="text" placeholder="Find dorms" />
+      <button class="all-dorms" onclick="location.href='./reviews.html'">All dorms</button>
+    </div>
+
+  </section>
+
+</body>
+
+<script src="../node_modules/axios/dist/axios.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script>
+  $(function () {
+
+    if (localStorage.getItem('username') != null) {
+      let link = "location.href='./user-page.html'"
+
+      let username = localStorage.getItem('username')
+      $('.login').replaceWith(`<button class='greeting' onclick=${link}>Hi, ${username}</button>`)
+      $('.signup').hide()
+    }
+  });
+</script>
+
+</html>

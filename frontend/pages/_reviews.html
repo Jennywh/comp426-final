@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Bulma Version 0.8.x-->
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Alatsi&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles/style.css" />
+  <meta charset="UTF-8" />
+  <meta name="keywords" content="UNC Dorm" />
+  <meta name="author" content="Jenny Wang" />
+  <title>UNC-Dorm</title>
+  <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
+
+
+  <style>
+    #viewDiv {
+      height: 500px;
+      width: 100%;
+      /* position: relative; */
+      position: absolute;
+
+    }
+
+    .cover {
+      height: 500px;
+      width: 100%;
+      position: absolute;
+      background: #3298dc;
+      text-align: center;
+      opacity: 0.6;
+      font-family: 'Alatsi', sans-serif;
+
+
+    }
+
+    .title {
+      color: white;
+      top: 50%;
+      position: relative;
+    }
+
+
+    .navbar {
+      background: #3298dc;
+    }
+
+    .field {
+      position: relative;
+      top: 545px;
+      width: 80%;
+      left: 14%;
+    }
+
+    .button {
+      margin: 10px 0 10px 0;
+    }
+
+    .content {
+      position: relative;
+      top: 600px;
+    }
+
+    .dorm-name {
+      display: block
+    }
+
+    .level {
+      justify-content: space-around;
+    }
+  </style>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
+  <script src="https://js.arcgis.com/4.13/"></script>
+  <script src="dorms.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="../img/logo.png" alt="logo">
+      </a>
+      <a class="navbar-item" href="./index.html">
+        Home
+      </a>
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary signup" href='./sign-up.html'>
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light login" href='./log-in.html'>
+              Log in
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="viewDiv"> </div>
+
+
+  <div class="cover">
+    <h1 class="title">
+      Double click to view map
+    </h1>
+  </div>
+
+  <div class="field is-grouped">
+    <p class="control is-expanded">
+      <input class="input" type="text" placeholder="Find a repository">
+    </p>
+    <p class="control">
+      <a class="button is-info">
+        Search
+      </a>
+    </p>
+  </div>
+
+  <div class="content">
+
+
+
+    <div class="level">
+      <div class="level-left">
+        <img class="level-item" src="https://picsum.photos/200" alt="sample dorm image" />
+
+      </div>
+      <div class="texts">
+        <div class="dorm-name">1.Hinton James</div>
+        <div class="stars">⭐⭐⭐⭐ 20 reviews</div>
+        <div class="sample-review">
+          “Hinton James is a f* nightmare. The elevators broke all the
+          time...” read more
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <script>
+
+
+
+    $(function () {
+      if (localStorage.getItem('username') != null) {
+        let link = "location.href='./_user-page.html'"
+        let username = localStorage.getItem('username')
+        $('.login').replaceWith(`<button class='greeting' onclick=${link}>Hi, ${username}</button>`)
+        $('.signup').hide()
+      }
+
+
+      $(".cover").dblclick(function () {
+        $('.cover').slideUp();
+      });
+
+
+      $('.viewMapBtn').click(function () {
+        $('.viewMapBtn').slideDown()
+        $('html').addClass('showMap')
+        $('body').addClass('showMap')
+        $('.reviews').slideDown()
+        $('#viewDiv').slideDown()
+
+      })
+
+      $('.hero').click(function () {
+        $('.hero').slideUp()
+      })
+
+
+    })
+  </script>
+</body>
+
+</html>
