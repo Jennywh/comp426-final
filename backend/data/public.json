@@ -1,98 +1,85 @@
 {
+  "dorms": {
+    "hojo": {
+      "name": "Hinton James",
+      "pic": "https://picsum.photos/140",
+      "community": "Hinton James Community",
+      "review": {}
+    },
+    "alderman": {
+      "name": "Alderman",
+      "pic": "https://picsum.photos/140",
+      "community": "Kenan Community",
+      "review": {}
+    },
+    "rv1": {
+      "name": "Ram Village 1",
+      "pic": "https://picsum.photos/140",
+      "community": "Ram Village Community",
+      "review": {}
+    }
+  },
   "reviews": {
     "1234": [
       {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "Hinton James is a fucking nightmare.Hinton James is a fucking nightmare.Hinton James is a fucking nightmare."
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "rsg43"
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "hello"
-      },
-      {
+        "author": "test_user",
         "dorm": "Hardin",
         "score": 5,
-        "review": "good"
+        "review": "Good"
       },
       {
-        "dorm": "Hardin",
+        "author": "test_user",
+        "dorm": "Ram Village",
         "score": 5,
-        "review": "editing"
+        "review": "Awesome"
       },
       {
-        "dorm": "Hardin",
+        "author": "test_user",
+        "dorm": "Hinton James",
         "score": 5,
-        "review": "done"
+        "review": "NOOOO"
       },
       {
-        "dorm": "Craig North",
+        "author": "test_user",
+        "dorm": "Hinton James",
         "score": 5,
-        "review": "nihao"
+        "review": "review1"
       }
     ],
     "mingming": [
       {
+        "author": "mingming",
         "dorm": "Hinton James",
         "score": 5,
-        "review": "123"
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "123123"
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "sdfaes"
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "rsg43"
-      },
-      {
-        "dorm": "Hinton James",
-        "score": 5,
-        "review": "hello"
-      },
-      {
-        "dorm": "Hardin",
-        "score": 5,
-        "review": "good"
-      },
-      {
-        "dorm": "Hardin",
-        "score": 5,
-        "review": "ononoon"
-      },
-      {
-        "dorm": "Hardin",
-        "score": 5,
-        "review": "bdrsteyn"
-      },
-      {
-        "dorm": "Craig North",
-        "score": 5,
-        "review": "nihao"
-      },
-      {
-        "dorm": "Horton",
-        "score": 4,
-        "review": "aefrdbtrsd"
-      },
-      {
-        "dorm": "Everett",
-        "score": 5,
-        "review": "aerbegsefa"
+        "review": "review2"
       }
-    ]
+    ],
+    "jenny": [
+      {
+        "author": "jenny",
+        "dorm": "Horton",
+        "score": 5,
+        "review": "vfsiahjcocbhfsjoclkb"
+      }
+    ],
+    "reviews": {
+      "mingming": [
+        {
+          "dorm": "Kenan",
+          "score": 5,
+          "review": "cavdesv"
+        },
+        {
+          "dorm": "Parker",
+          "score": 3,
+          "review": "acdbghjyuthrg"
+        },
+        {
+          "dorm": "Hardin",
+          "score": 5,
+          "review": "bsertnrbt"
+        }
+      ]
+    }
   }
 }

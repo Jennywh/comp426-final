@@ -6,11 +6,9 @@ $(function() {
         ev.stopImmediatePropagation();
         let username = document.getElementById("uname").value;
         let password = document.getElementById("pword").value;
-
         (async () => {
             let r = await axios.post("http://localhost:3000/account/login",
                 {"name": username, "pass": password, "data": { }}).then(it => it.data);
-            localStorage.setItem('jwt', r.jwt);
         })();
         // alert("logged in");
     })
