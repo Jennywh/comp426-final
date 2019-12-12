@@ -1,24 +1,45 @@
-const dorms = [
+
+
+
+
+const dormImg = {
+    'Hinton James': 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Hinton_James_Residence_Hall_at_UNC.jpg',
+    'Craige': 'http://reslife.web.unc.edu/files/2015/05/DSC_0139-e1433128672176.jpg',
+    'Hardin': 'http://reslife.web.unc.edu/files/2015/06/Hardin.jpg',
+    'Horton': 'http://reslife.web.unc.edu/files/2015/06/Horton.jpg',
+    'Rams Village 1-3': 'https://pbs.twimg.com/profile_images/786619162042966016/cQ1ZtqS5_400x400.jpg',
+    'Rams Village 4-5': 'https://snworksceo.imgix.net/dth/3e406ca7-b73f-4a62-8466-5120fd83aac7.sized-1000x1000.JPG?w=1000',
+    'Carmichael': 'https://snworksceo.imgix.net/dth/d03be0b6-7d47-4c88-b778-b1d82953103b.sized-1000x1000.jpg?w=1000',
+    'Granville': 'https://www.newsobserver.com/latest-news/u9jtvh/picture236067933/alternates/FREE_1140/Granville%20Towers.JPEG',
+    'Old West': 'https://blogs.lib.unc.edu/ncm/wp-content/uploads/2018/10/Old_West_Final_View.jpg'
+}
+
+
+const dormsArr = [
     //kenan community
     {
         name: 'kenan',
         rating: '4.5/5.0',
         coordinate: [-79.04752, 35.91459],
+
     },
     {
         name: 'Alderman',
         rating: '4.2/5.0',
         coordinate: [-79.04821, 35.91474],
+
     },
     {
         name: 'Mclver',
         rating: '4.2/5.0',
         coordinate: [-79.04782, 35.91405],
+
     },
     {
         name: 'Spencer',
         rating: '4.2/5.0',
         coordinate: [-79.04942, 35.915],
+
     },
 
     //lowerquad community
@@ -26,17 +47,20 @@ const dorms = [
         name: 'Aycock',
         rating: '4.2/5.0',
         coordinate: [-79.04712, 35.91284],
+        img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Hinton_James_Residence_Hall_at_UNC.jpg'
+
     },
     {
         name: 'Graham',
         rating: '4.2/5.0',
         coordinate: [-79.04659, 35.91304],
+
     },
     {
         name: 'Stacy',
         rating: '4.2/5.0',
         coordinate: [-79.046, 35.9129]
-        ,
+
     },
     {
         name: 'Everett',
@@ -158,6 +182,8 @@ const dorms = [
         name: 'Hinton James',
         rating: '4.2/5.0',
         coordinate: [-79.04318, 35.90243],
+        img: 'https://upload.wikimedia.org/wikipedia/commons/a/a4/Hinton_James_Residence_Hall_at_UNC.jpg'
+
     },
 
     //Craige

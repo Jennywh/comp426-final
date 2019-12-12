@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="UNC Dorm" />
+    <meta name="author" content="Jenny Wang" />
+    <title>UNC-dorm</title>
+</head>
+
+<body class="reviews">
+    <div class="top-bar">
+        <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:300px;">
+                <input id="myInput" type="text" name="myDorm" placeholder="Search for Dorms">
+            </div>
+        </form>
+
+        <div class="right">
+            <button class="search">
+                Search
+            </button>
+            <button class="login" onclick="location.href='./log-in.html'">
+                Log In
+            </button>
+            <button class="signup" onclick="location.href='./sign-up.html'">
+                Sign Up
+            </button>
+        </div>
+    </div>
+
+    <div class="content" id="reviews">
+    </div>
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="reviews.js" type="module"></script>
+    <script src="autocomplete.js"></script>
+
+</body>
+
+
+</html>

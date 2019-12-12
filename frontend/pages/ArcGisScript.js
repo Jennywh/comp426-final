@@ -82,7 +82,7 @@ require([
     var graphicsLayer = new GraphicsLayer();
     map.add(graphicsLayer);
 
-    for (let dorm of dorms) {
+    for (let dorm of dormsArr) {
         var point = {
             type: "point",
             longitude: dorm.coordinate[0],

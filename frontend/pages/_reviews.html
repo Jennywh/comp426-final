@@ -23,6 +23,17 @@
 
     }
 
+    .dorm-img {
+      width: 120px;
+      height: 120px;
+    }
+
+    .is-expanded {
+
+      width: 100%;
+      margin-right: 10px;
+    }
+
     .cover {
       height: 500px;
       width: 100%;
@@ -57,9 +68,24 @@
       margin: 10px 0 10px 0;
     }
 
+    .back-btn {
+      position: relative;
+      left: 50%;
+      transform: translate(-38%, 0);
+      margin-bottom: 50px;
+      width: 200px;
+    }
+
     .content {
       position: relative;
       top: 600px;
+    }
+
+    .dorm {
+      position: relative;
+      left: 50%;
+      transform: translate(-38%, 0);
+      margin-bottom: 50px;
     }
 
     .dorm-name {
@@ -69,14 +95,17 @@
     .level {
       justify-content: space-around;
     }
+
+    .texts {
+      width: 80%
+    }
   </style>
   <link rel="stylesheet" href="https://js.arcgis.com/4.13/esri/css/main.css">
-  <script src="https://js.arcgis.com/4.13/"></script>
-  <script src="dorms.js"></script>
-  <script src="script.js"></script>
+
 </head>
 
 <body>
+
 
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
@@ -122,20 +151,25 @@
   </div>
 
   <div class="field is-grouped">
+
+    <div autocomplete="off" class='is-expanded' action="/action_page.php">
+      <div class="control is-expanded autocomplete">
+        <input class="input" id="myInput" type="text" name="myDorm" placeholder="Search the dorm">
+      </div>
+    </div>
+
+    <!--     
     <p class="control is-expanded">
       <input class="input" type="text" placeholder="Find a repository">
-    </p>
+    </p> -->
     <p class="control">
-      <a class="button is-info">
+      <a class="button is-info" id='myInput'>
         Search
       </a>
     </p>
   </div>
 
   <div class="content">
-
-
-
     <div class="level">
       <div class="level-left">
         <img class="level-item" src="https://picsum.photos/200" alt="sample dorm image" />
@@ -151,8 +185,14 @@
       </div>
     </div>
   </div>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
+  <script src="../node_modules/axios/dist/axios.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="autocomplete.js"></script>
+  <script src="reviews.js" type="module"></script>
+  <script src="https://js.arcgis.com/4.13/"></script>
+  <script src="dorms.js"></script>
+  <script src="ArcGisScript.js"></script>
   <script>
 
 
@@ -183,6 +223,8 @@
       $('.hero').click(function () {
         $('.hero').slideUp()
       })
+      const ALL_DORMS = ["Hinton James", "Horton", "Ram Village", "Hardin", "Craig", "Craig North"];
+      autocomplete(document.getElementById("myInput"), ALL_DORMS);
 
 
     })

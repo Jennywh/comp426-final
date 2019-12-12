@@ -297,7 +297,10 @@ input[type=submit]:active {
 }
 
 .signUpForm .wrapper {
-  width: 320px;
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -455,7 +458,7 @@ input[type=submit]:active {
 }
 
 .user-page {
-  background: #66bfec;
+  background: #a3d7ff;
   background-size: cover;
   min-height: 800px;
   min-width: 500px;
@@ -478,7 +481,6 @@ input[type=submit]:active {
   position: absolute;
   width: 500px;
   height: 550px;
-  opacity: 0.9;
 }
 
 .user-page .top-bar {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.8.0/css/bulma.min.css" />
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/bulma-divider.min.css">
+    <!-- <link rel="stylesheet" href="../styles/bulma-divider.min.css"> -->
     <link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
 
 
@@ -17,6 +17,28 @@
         nav.navbar {
             height: 6rem !important;
             box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06) !important;
+        }
+
+        .level {
+            justify-content: space-around;
+            margin: 50px;
+        }
+
+        .level-left {
+            margin-right: 55px;
+        }
+
+        .texts {
+            width: 60%
+        }
+
+        button {
+            margin: 10px 20px 0 0;
+        }
+
+        .dorm-img {
+            width: 120px;
+            height: 120px;
         }
     </style>
 
@@ -46,8 +68,8 @@
 
             <div id="navbarMenu" class="navbar-menu">
                 <div class="navbar-end">
-                    <a class="navbar-item is-size-5 has-text-weight-semibold">
-                        My Reviews(2)
+                    <a class="navbar-item is-size-5 has-text-weight-semibold my-reviews">
+                        My Reviews
                     </a>
                 </div>
             </div>
@@ -58,54 +80,132 @@
 
     <!-- Image -->
     <section class="hero ">
-        <!-- <div class="hero-body">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-8 is-offset-2">
-            <figure class="image is-16by9">
-              <img src="../images/first-post.png" alt="">
-            </figure>
-          </div>
-        </div> -->
-
-        <section class="section">
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <div class="content is-medium">
-                        <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
-                        <h1 class="title">Hinton James</h1>
-                        <p>This is a starter template for creating a beautiful, customizable blog with minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw
-                            sites,
-                            configuration settings can be found in config</p>
+        <div class="content">
+            <div class="level">
+                <div class="level-left">
+                    <img class="level-item" src="https://picsum.photos/200" alt="sample dorm image" />
+                </div>
+                <div class="texts">
+                    <div class="dorm-name">1.Hinton James</div>
+                    <div class="stars">⭐⭐⭐⭐ 20 reviews</div>
+                    <div class="sample-review">
+                        “Hinton James is a f* nightmare. The elevators broke all the
+                        time...” read more
                     </div>
                 </div>
             </div>
-        </section>
-
-        <div class="is-divider"></div>
-
-        <section class="section">
-            <div class="columns">
-                <div class="column is-8 is-offset-2">
-                    <div class="content is-medium">
-                        <!-- <h2 class="subtitle is-4">December 25, 2018</h2> -->
-                        <h1 class="title">Another one</h1>
-                        <p>This is a starter template for creating a beautiful, customizable blog with minimal
-                            effort. You’ll only have to change a few settings and you’re ready to go. As with all Jigsaw
-                            sites,
-                            configuration settings can be found in config</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        </div>
         </div>
     </section>
 
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="dorms.js"></script>
 
+    <script>
+
+
+        const ALL_DORMS = ["Hinton James", "Horton", "Ram Village", "Hardin", "Craig", "Craig North"];
+
+        function mainPage() {
+            $(".content").empty();
+            (async () => {
+                let token = localStorage['jwt'];
+                if (token == undefined) {
+                    alert('Please log in');
+                } else {
+                    let user_info = await axios.get("http://localhost:3000/account/status", { headers: { Authorization: "Bearer " + token } });
+                    const apiUrl = 'http://localhost:3000/public/reviews/' + user_info.data.user.name;
+                    const res = await axios.get(apiUrl).then(it => it.data);
+                    let result = res.result;
+                    for (let i = 0; i < result.length; i++) {
+                        let dorm = result[i]['dorm'];
+                        let star = result[i]['score'];
+                        let review = result[i]['review'];
+                        let dormicon = dormImg[dorm]==undefined?'https://picsum.photos/120':dormImg[dorm]
+
+
+                        let dom = `
+                            <div class="level ">
+                                <div class="level-left">
+                                    <img class="level-item dorm-img" src=${dormicon} alt="sample dorm image" />
+                                </div>
+                                <div class="texts num${i}">
+                                    <div class="dorm-name">${dorm}</div>
+                                    <div class="stars">${star}</div>
+                                    <div class="sample-review">
+                                        ${review}
+                                    </div>
+                                    
+                                </div>
+                            </div>`;
+
+                        $(dom).appendTo($(".content"));
+                        let id_edit = "edit" + i.toString();
+                        let id_del = "del" + i.toString();
+                        let edit = $('<button class="button is-primary" id = edit> Edit </button>');
+                        let del = $('<button class="button is-danger" id=del> Delete </button>');
+
+                        edit.appendTo($(`.num${i}`));
+                        del.appendTo($(`.num${i}`));
+                        del.click((ev) => {
+
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                            ev.stopImmediatePropagation();
+                            (async () => {
+                                let r = await axios.delete("http://localhost:3000/public/reviews/" + user_info.data.user.name).then(it => it.data);
+
+                                $('.my-reviews').text(result.length)
+                                for (let j = 0; j < result.length; j++) {
+                                    if (j != i) {
+                                        let rr = await axios.post("http://localhost:3000/public/reviews/" + user_info.data.user.name,
+                                            { "type": "merge", "data": result[j] }).then(it => it.data);
+                                    }
+                                }
+                                location.reload();
+                            })();
+                        })
+                        edit.click((ev) => {
+                            ev.preventDefault();
+                            ev.stopPropagation();
+                            ev.stopImmediatePropagation();
+                            // working on result[i]
+                            // location.href = './write-review.html';
+                            let id_text = "text" + i.toString();
+                            let text = $(`<textarea class="textarea" id=${id_text}>${review}</textarea>`);
+                            text.appendTo($(`.num${i}`));
+                            let id_done = "done" + i.toString();
+                            let done = $('<button id=${id_done}> Done </button>');
+                            done.appendTo($(`.num${i}`));
+                            done.click((ev) => {
+                                ev.preventDefault();
+                                ev.stopPropagation();
+                                ev.stopImmediatePropagation();
+                                let new_score = 5; // should be the edited stars
+                                let new_review = text.val();
+                                (async () => {
+                                    let r = await axios.delete("http://localhost:3000/public/reviews/" + user_info.data.user.name).then(it => it.data);
+                                    for (let j = 0; j < result.length; j++) {
+                                        if (j != i) {
+                                            let rr = await axios.post("http://localhost:3000/public/reviews/" + user_info.data.user.name,
+                                                { "type": "merge", "data": result[j] }).then(it => it.data);
+                                        } else {
+                                            let rr = await axios.post("http://localhost:3000/public/reviews/" + user_info.data.user.name,
+                                                { "type": "merge", "data": { "dorm": dorm, "score": new_score, "review": new_review } }).then(it => it.data);
+                                        }
+                                    }
+                                    location.reload(true);
+                                })();
+                            })
+                        }
+                        )
+                    }
+                }
+            })();
+        }
+
+        mainPage();
+    </script>
 </body>
 
-</html>
+</html>_
