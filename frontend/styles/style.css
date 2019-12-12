@@ -237,8 +237,8 @@ input[type=submit]:active {
   color: chocolate;
   font-size: larger;
   position: absolute;
-  left: -10%;
-  top: -36%;
+  left: 10%;
+  top: -25%;
   padding: 10px;
   border-radius: 5px;
   text-align: center;

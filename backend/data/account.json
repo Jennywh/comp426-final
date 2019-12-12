@@ -7,8 +7,29 @@
         "dorm": "hojo"
       }
     },
+    "333": {
+      "passwordHash": "$2b$10$To8ZAivGzl9mu6aV4jQvruVHKWy6T8Oe47ptuixJSNKXdM978Rf1m",
+      "data": {
+        "year": "firstYear",
+        "dorm": "Hinton James"
+      }
+    },
     "1234": {
       "passwordHash": "$2b$10$K5gj8HFndvg170GAGlCJjO0jr3QTk6rS8gsdGw.FQbdPt3Huwn236",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "1344": {
+      "passwordHash": "$2b$10$8F9BobWA7JtUIsg6RyaZLOfhNA4/ypzCPqExIj7d.Y7fRZVAB8cLC",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "123433": {
+      "passwordHash": "$2b$10$Q7X6ngWdOJlMZM8bkCPurOHoeioVY4SufH3KOMRia7ajMSlHvfc0y",
       "data": {
         "year": "firstYear",
         "dorm": "hojo"
@@ -75,6 +96,48 @@
       "data": {
         "year": "firstYear",
         "dorm": "hojo"
+      }
+    },
+    "1234ee": {
+      "passwordHash": "$2b$10$4xNTPEFjrYDGYrXGZv9EZO4DeOzrmQfNc8zc0mlMPiNhH36cXFHDG",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "1234rrr": {
+      "passwordHash": "$2b$10$BXNbdjiDt.a9jAU9yMOrDuaOYp/Cf7wAvy3f/hLXB2JSsPVYnndXO",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "jennyy999": {
+      "passwordHash": "$2b$10$3T478MfDh9.F5NB9wv/h5.y6pfyaeZCbbtu5hCRFiwIcjmT.QUxby",
+      "data": {
+        "year": "senior",
+        "dorm": "craigNorth"
+      }
+    },
+    "trr": {
+      "passwordHash": "$2b$10$13mbzMAr/DN5nLWVuIaqG.zrT4HRG0SdeuH4YSSUAIk2T1ada1436",
+      "data": {
+        "year": "firstYear",
+        "dorm": "hojo"
+      }
+    },
+    "try agagin ": {
+      "passwordHash": "$2b$10$3kZvbm8xspi3MuQ7OpCK4OU0aR5kg4GtbLKvhUQ.AtPRWBJqcgvBy",
+      "data": {
+        "year": "sophomore",
+        "dorm": "Craige"
+      }
+    },
+    "jenny99": {
+      "passwordHash": "$2b$10$dB7A6uUjfO29YswcBW6iIOcJif9ymFkSS.rcrgoxbORmmEZENWQGG",
+      "data": {
+        "year": "senior",
+        "dorm": "hinton"
       }
     }
   }
